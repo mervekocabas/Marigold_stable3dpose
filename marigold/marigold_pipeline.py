@@ -226,6 +226,7 @@ class MarigoldPipeline(DiffusionPipeline):
             rgb = rgb.unsqueeze(0)  # [1, rgb, H, W]
         elif isinstance(input_image, torch.Tensor):
             rgb = input_image
+            rgb = rgb.unsqueeze(0) 
         else:
             raise TypeError(f"Unknown input type: {type(input_image) = }")
         input_size = rgb.shape
