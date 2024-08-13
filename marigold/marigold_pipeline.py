@@ -218,7 +218,6 @@ class MarigoldPipeline(DiffusionPipeline):
 
         # ----------------- Image Preprocess -----------------
         # Convert to torch tensor
-        import ipdb; ipdb.set_trace()
         if isinstance(input_image, Image.Image):
             input_image = input_image.convert("RGB")
             # convert to torch tensor [H, W, rgb] -> [rgb, H, W]
