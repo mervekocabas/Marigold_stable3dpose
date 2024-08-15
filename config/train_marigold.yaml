@@ -35,10 +35,10 @@ trainer:
   training_noise_scheduler:
     pretrained_path: stable-diffusion-2
   init_seed: 2024  # use null to train w/o seeding
-  save_period: 50
-  backup_period: 2000
-  validation_period: 2000
-  visualization_period: 2000
+  save_period: 500
+  backup_period: 500
+  validation_period: 500
+  visualization_period: 500
 
 multi_res_noise:
   strength: 0.9
@@ -48,8 +48,8 @@ multi_res_noise:
 gt_depth_type: depth_raw_norm
 gt_mask_type: valid_mask_raw
 
-max_epoch: 10000  # a large enough number
-max_iter: 30000  # usually converges at around 20k
+max_epoch: 4000  # a large enough number
+max_iter: 2000  # usually converges at around 20k
 
 optimizer:
   name: Adam
